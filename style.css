@@ -1,0 +1,89 @@
+
+/* categoriesSection css */
+.row{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+
+.col{
+    /* border: 1px solid red;
+    text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 .5em;
+}
+.num-container{
+    height: 70px;
+    width: 70px;
+    background-color: #dff1fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+.num-container .circle1{
+    height: 30px;
+    width: 30px;
+    border: 1px solid #7dafce;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.num-container .circle1 .circle2{
+    height: 26px;
+    width: 26px;
+    border: 1px solid #7dafce;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.num-container .circle1 .circle2 .number h3{
+    color: #7dafce;
+    font-size: .95rem;
+}
+.col h5{
+    padding: 0;
+    margin: .4em;
+    font-weight: 200;
+    color: #b8b8b8;
+}
+
+
+.num-container .number h3{
+    color: #2874a6;
+}
+.iit{
+    font-size: 1.6rem;
+}
+.icse_neet_engg,
+.govt{
+    font-size: .95rem;
+}
+
+
+/* NovelsSection */
+.novelsContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.novelsContainer::-webkit-scrollbar{
+    width: 0px;
+}
+.novelBox{
+    height: 95px;
+    min-width: 230px;
+    border-radius: 22px;
+    margin-right: 1em;
+}
+.romance{
+    background-image: url('./images/romance.jpg');
+    /* object-fit: cover; */
+    background-size: cover;
+    background-position: 0 80%;
+}
