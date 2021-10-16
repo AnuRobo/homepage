@@ -1,12 +1,81 @@
 
-*{
+*{  
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+}
+
+
+
+
+
+/* sliderSection */
+.sliderSection{
+    height: 26vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width:80%;
+}
+.carousel{
+    /* border:2px solid #ccc; */
+    height: 20vh;
+}
+.slider{
+    height: 100%;
+    display: flex;
+    width: 500%;
+    transition: all 0.3s;
+}
+.slider div{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.inner{
+    color: #fff;
+    font-size: 2rem;
+    height: 100%;
+    width: 90%;
+    /* margin: 0 1em; */
+    background-color: #7dafce;
+    border-radius: 16px;
+}
+.controls ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.controls ul li{
+    width: 10px;
+    height: 10px;
+    border-width: 0;
+    background: #b8b8b8;
+    border-radius: 50%;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.controls ul li.selected{
+    background: #2874a6;
+}
+
+
+
+
 
 /* categoriesSection css */
 .row{
     display: flex;
     /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -20,8 +89,8 @@
     margin:0 .5em;
 }
 .num-container{
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     background-color: #dff1fd;
     display: flex;
     justify-content: center;
@@ -70,32 +139,114 @@
 }
 
 
-/* NovelsSection */
+/* NovelsSection --------------------------------------------*/
 .novelsContainer{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 .novelsContainer::-webkit-scrollbar{
     width: 0px;
 }
 .novelBox{
-    height: 98px;
+    height: 110px;
     min-width: 230px;
-    border-radius: 22px;
+    border-radius: 18px;
     margin-right: 1em;
+    background-color: #202020;
+    color: #babbba;
 }
 .romance{
-    background-image: url('./images/romance.jpg');
-    /* object-fit: cover; */
+    background-image: url('./images/romance.png'); 
     background-size: cover;
     background-position: 0 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.romance h1{
+    margin-top: 1.1em;
+    font-size: 1.8rem;
+}
+.romance h6{
+    margin-top: .4em;
+    font-size: 1rem;
+}
+
+.fantasy{
+    background-image: url('./images/fantasy.jpg');
+    background-size: cover;
+    background-position: 0 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.fantasy h1{
+    margin: 0;
+    margin-bottom: 6px;
+}
+.sciFi{
+    background-image: url('./images/scifi.jpg'); 
+    background-size: cover;
+    background-position: 20% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sciFi h1{
+    margin: 0;
+    font-size: 1.8rem;
+}
+.sciFi h4{
+    margin: 0;
+    font-size: 1.1rem;
+}
+.thriller{
+    background-image: url('./images/thrill.jpg'); 
+    background-size: cover;
+    background-position: 0% 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.thriller h1{
+    margin: 0;
+}
+.thriller h4{
+    margin: 0;
+}
+.thriller div{
+    text-align: center;
+}
+.explore{
+    background-image: url('./images/explore.jpg'); 
+    background-size: cover;
+    background-position: 0% 90%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+}
+.explore h1{
+    margin: 0;
+}
+.explore h3{
+    margin: 0;
+}
+.explore div{
+    text-align: center;
 }
 
 
+/* bookshoe -------------------------------------------------*/
 .bookshowContainer{
     display: flex;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 .books{
     display: flex;
@@ -106,6 +257,9 @@
 .bookimageBox{
     height: 130px;
     width:130px;
+    /* height: 0;
+    width: 100%;
+    padding-bottom: 100%; */
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
@@ -116,10 +270,11 @@
     width: 45%;
 }
 .bookContent{
-    width:130px;
+    height: 120px;
+    width:135px;
 }
 .bookContent p:nth-child(1){
-    font-size: .85rem;
+    font-size: .82rem;
 }
 .bookContent p:nth-child(2){
     color:#249ae9;
@@ -136,4 +291,25 @@
     margin-top: 4px;
     color:#71a874;
     font-size: .85rem;
+}
+
+
+/* common */
+.sideSpacing{
+    padding-left: 1em;
+}
+.subHeading{
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* media query --------------------------------------------------*/
+@media (min-width: 476px){
+    .sliderSection{
+        height: 68vh;
+    }
+    .carousel{
+        /* border:2px solid #ccc; */
+        height: 60vh;
+    }
 }
